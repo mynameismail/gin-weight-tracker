@@ -22,7 +22,12 @@ func main() {
 	}
 
 	r := gin.Default()
-	routes.MakeAppRoutes(r)
+
+	r.Static("/assets", "./app/assets")
+	r.LoadHTMLGlob("app/views/*")
+
 	r.Use(cors.Default())
+	routes.MakeAppRoutes(r)
+
 	r.Run(":" + os.Getenv("APP_PORT"))
 }
