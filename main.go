@@ -9,17 +9,19 @@ import (
 	"github.com/joho/godotenv"
 
 	"gin-weight-tracker/routes"
+	"gin-weight-tracker/services"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
+	if err := godotenv.Load(); err != nil {
 		log.Fatal("Error loading .env file")
 	}
 
 	if os.Getenv("APP_ENV") == "production" {
 		gin.SetMode(gin.ReleaseMode)
 	}
+
+	services.Init()
 
 	r := gin.Default()
 
