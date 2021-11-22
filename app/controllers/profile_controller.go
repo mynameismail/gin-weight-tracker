@@ -4,12 +4,17 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	"gin-weight-tracker/app/repositories"
 )
 
 type ProfileController struct {}
 
 func (h ProfileController) Index(c *gin.Context) {
-	c.HTML(http.StatusOK, "profile_index.html", gin.H{})
+	profiles := repositories.Profile{}.All()
+	c.HTML(http.StatusOK, "profile_index.html", gin.H{
+		"profiles": profiles,
+	})
 }
 
 func (h ProfileController) Create(c *gin.Context) {
