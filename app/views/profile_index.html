@@ -9,21 +9,20 @@
 </head>
 <body>
   <div class="main">
-    <div class="header">
-      <div class="header__title">
-        Profile
-      </div>
-    </div>
     <div class="body">
-      {{ range .profiles}}
-      <div>
-        <a href="/profile/switch/{{ .ID }}">{{ .Username }}</a>
+      <div class="profile-choices">
+        <div class="choices__title">Select profile</div>
+        {{ range .profiles}}
+        <div class="choice">
+          <input class="choice__input" id="profile-{{ .ID }}" type="radio" name="profile" value="{{ .ID }}">
+          <label class="choice__label" for="profile-{{ .ID }}">{{ .Username }}</label>
+        </div>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
     <div class="footer">
       <div class="footer__button">
-        <button class="button" type="button" onclick="javascript:void(0);">Switch</button>
+        <button class="button" type="button" onclick="location.href='/profile/create';">New Profile</button>
       </div>
     </div>
   </div>

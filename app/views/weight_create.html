@@ -12,10 +12,14 @@
     <div class="body">
       <form class="form" action="/weight/store" method="post">
         <div class="form__body">
-          <label for="date">Date</label>
-          <input class="input" type="date" name="date" required>
-          <label for="weight">Weight</label>
-          <input class="input" type="number" name="weight" min="0" required>
+          <div class="title">New record</div>
+
+          <label class="input__label" for="input-date">Date</label>
+          <input class="input" type="date" id="input-date" name="date" required>
+
+          <label class="input__label" for="input-weight">Weight (kg)</label>
+          <input class="input" type="number" id="input-weight" name="weight" min="0" value="58" required>
+
           <button class="button" type="submit">Record</button>
         </div>
       </form>
