@@ -14,9 +14,10 @@ func (h WeightController) Create(c *gin.Context) {
 
 func (h WeightController) Store(c *gin.Context) {
 	date := c.PostForm("date")
-	weight := c.PostForm("weight")
+	min_weight := c.PostForm("min_weight")
+	max_weight := c.PostForm("max_weight")
 
-	if date == "" || weight == "" {
+	if date == "" || min_weight == "" || max_weight == "" {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"message": "Bad Request",
 		})
