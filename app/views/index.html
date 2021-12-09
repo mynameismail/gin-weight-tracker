@@ -1,66 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Tracker</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div class="main">
-    <div class="header">
-      <div class="header__action">
-        <a class="link" href="/profile">
-          <div class="link__div">
-            <div class="icon"><img src="/assets/avatar.png" alt="avatar" width="20"></div>
-            <div class="text">username</div>
-          </div>
-        </a>
-      </div>
+{{ template "head.html" }}
+
+<div class="main">
+  <div class="header">
+    <div class="header__action">
+      <a class="link" href="/profile">
+        <div class="link__div">
+          <div class="icon"><img src="/assets/avatar.png" alt="avatar" width="20"></div>
+          <div class="text">username</div>
+        </div>
+      </a>
     </div>
-    <div class="body">
-      <div class="latest">
-        <div class="latest__title">Latest</div>
-        <div class="latest__value">
-          <span class="latest__text">58</span>
-          <span class="latest__unit">kg</span>
-          <span class="latest__arrow">&#9650;1</span>
-        </div>
-        <div class="latest__date">25 Nov 2021</div>
+  </div>
+  <div class="body">
+    <div class="latest">
+      <div class="latest__title">Latest</div>
+      <div class="latest__value">
+        <span class="latest__text">58</span>
+        <span class="latest__unit">kg</span>
+        <span class="latest__arrow">&#9650;1</span>
       </div>
-      <div class="weight-records">
-        <div class="record">
-          <div class="record__date">24 Nov</div>
-          <div class="record__value">
-            <span class="record__text">57</span>
-            <span class="record__unit">kg</span>
-          </div>
-          <div class="record__arrow">&#9660;1</div>
-        </div>
-        <div class="record">
-          <div class="record__date">23 Nov</div>
-          <div class="record__value">
-            <span class="record__text">58</span>
-            <span class="record__unit">kg</span>
-          </div>
-          <div class="record__arrow">&#9650;1</div>
-        </div>
-        <div class="record">
-          <div class="record__date">22 Nov</div>
-          <div class="record__value">
-            <span class="record__text">57</span>
-            <span class="record__unit">kg</span>
-          </div>
-          <div class="record__arrow">-</div>
-        </div>
-      </div>
+      <div class="latest__date">25 Nov 2021</div>
     </div>
-    <div class="footer">
-      <div class="footer__button">
-        <button class="button" type="button" onclick="location.href='/weight/create';">New Record</button>
+    <div class="weight-records">
+      <div class="record">
+        <div class="record__date">24 Nov</div>
+        <div class="record__value">
+          <span class="record__text">57</span>
+          <span class="record__unit">kg</span>
+        </div>
+        <div class="record__arrow">&#9660;1</div>
+      </div>
+      <div class="record">
+        <div class="record__date">23 Nov</div>
+        <div class="record__value">
+          <span class="record__text">58</span>
+          <span class="record__unit">kg</span>
+        </div>
+        <div class="record__arrow">&#9650;1</div>
+      </div>
+      <div class="record">
+        <div class="record__date">22 Nov</div>
+        <div class="record__value">
+          <span class="record__text">57</span>
+          <span class="record__unit">kg</span>
+        </div>
+        <div class="record__arrow">-</div>
       </div>
     </div>
   </div>
-</body>
-</html>
+  <div class="footer">
+    <div class="footer__button">
+      <button class="button" type="button" onclick="location.href='/weight/create';">New Record</button>
+    </div>
+  </div>
+</div>
+
+{{ template "foot.html" }}

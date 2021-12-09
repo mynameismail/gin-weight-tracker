@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Tracker</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div class="main">
-    <div class="body">
-      <form class="form" action="/weight/store" method="post">
-        <div class="form__body">
-          <div class="title">New record</div>
+{{ template "head.html" }}
 
-          <label class="input__label" for="input-date">Date</label>
-          <input class="input" type="date" id="input-date" name="date" required>
+<div class="main">
+  <div class="body">
+    <form class="form" action="/weight/store" method="post">
+      <div class="form__body">
+        <div class="title">New record</div>
 
-          <label class="input__label" for="input-min-weight">Min Weight (kg)</label>
-          <input class="input" type="number" id="input-min-weight" name="min_weight" min="0" value="58" required>
+        <label class="input__label" for="input-date">Date</label>
+        <input class="input" type="date" id="input-date" name="date" required>
 
-          <label class="input__label" for="input-max-weight">Max Weight (kg)</label>
-          <input class="input" type="number" id="input-max-weight" name="max_weight" min="0" value="58" required>
+        <label class="input__label" for="input-min-weight">Min Weight (kg)</label>
+        <input class="input" type="number" id="input-min-weight" name="min_weight" min="0" value="58" required>
 
-          <button class="button" type="submit">Record</button>
-        </div>
-      </form>
-    </div>
+        <label class="input__label" for="input-max-weight">Max Weight (kg)</label>
+        <input class="input" type="number" id="input-max-weight" name="max_weight" min="0" value="58" required>
+
+        <button class="button" type="submit">Record</button>
+      </div>
+    </form>
   </div>
-</body>
-</html>
+</div>
+
+{{ template "foot.html" }}

@@ -1,30 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Tracker</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div class="main">
-    <div class="body">
-      <div class="profile-choices">
-        <div class="choices__title">Select profile</div>
-        {{ range .profiles}}
-        <div class="choice">
-          <input class="choice__input" id="profile-{{ .ID }}" type="radio" name="profile" value="{{ .ID }}">
-          <label class="choice__label" for="profile-{{ .ID }}">{{ .Username }}</label>
-        </div>
-        {{ end }}
+{{ template "head.html" }}
+
+<div class="main">
+  <div class="body">
+    <div class="profile-choices">
+      <div class="choices__title">Select profile</div>
+      {{ range .profiles}}
+      <div class="choice">
+        <input class="choice__input" id="profile-{{ .ID }}" type="radio" name="profile" value="{{ .ID }}">
+        <label class="choice__label" for="profile-{{ .ID }}">{{ .Username }}</label>
       </div>
-    </div>
-    <div class="footer">
-      <div class="footer__button">
-        <button class="button" type="button" onclick="location.href='/profile/create';">New Profile</button>
-      </div>
+      {{ end }}
     </div>
   </div>
-</body>
-</html>
+  <div class="footer">
+    <div class="footer__button">
+      <button class="button" type="button" onclick="location.href='/profile/create';">New Profile</button>
+    </div>
+  </div>
+</div>
+
+{{ template "foot.html" }}

@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Tracker</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div class="main">
-    <div class="body">
-      <div class="welcome">
-        <h2 class="welcome__title">Welcome,</h2>
-        <h4 class="welcome__subtitle">Login to continue</h4>
-      </div>
-      <div class="avatar">
-        <img class="avatar__img" src="/assets/avatar.png" alt="avatar">
-      </div>
-      <form class="form" action="/login" method="post">
-        <div class="form__body">
-          <input class="input" type="password" name="password" placeholder="Password" required>
-          <button class="button" type="submit">Login</button>
-        </div>
-      </form>
+{{ template "head.html" }}
+
+<div class="main">
+  <div class="body">
+    <div class="welcome">
+      <h2 class="welcome__title">Welcome,</h2>
+      <h4 class="welcome__subtitle">Login to continue</h4>
     </div>
+    <div class="avatar">
+      <img class="avatar__img" src="/assets/avatar.png" alt="avatar">
+    </div>
+    <form class="form" action="/login" method="post">
+      <div class="form__body">
+        <input class="input" type="password" name="password" placeholder="Password" required>
+        <button class="button" type="submit">Login</button>
+      </div>
+    </form>
   </div>
-</body>
-</html>
+</div>
+
+{{ template "foot.html" }}

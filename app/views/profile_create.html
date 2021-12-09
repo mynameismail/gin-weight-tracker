@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Tracker</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div class="main">
-    <div class="body">
-      <form class="form" action="/profile/store" method="post">
-        <div class="form__body">
-          <div class="title">New profile</div>
+{{ template "head.html" }}
 
-          <label class="input__label" for="input-username">Username</label>
-          <input class="input" type="text" id="input-username" name="username" required>
+<div class="main">
+  <div class="body">
+    <form class="form" action="/profile/store" method="post">
+      <div class="form__body">
+        <div class="title">New profile</div>
 
-          <label class="input__label" for="input-birth">Birth date</label>
-          <input class="input" type="date" id="input-birth" name="birth" required>
+        <label class="input__label" for="input-username">Username</label>
+        <input class="input" type="text" id="input-username" name="username" required>
 
-          <button class="button" type="submit">Create</button>
-        </div>
-      </form>
-    </div>
+        <label class="input__label" for="input-birth">Birth date</label>
+        <input class="input" type="date" id="input-birth" name="birth" required>
+
+        <button class="button" type="submit">Create</button>
+      </div>
+    </form>
   </div>
-</body>
-</html>
+</div>
+
+{{ template "foot.html" }}
